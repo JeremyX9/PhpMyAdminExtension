@@ -1,0 +1,103 @@
+/* Voller Hintergrund für das Popup */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dunkles Grau für das gesamte Popup */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container zentrieren und breiter machen */
+.container {
+    background-color: #333; /* Helleres Grau für den Container */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 90%; /* Breite des Containers angepasst, damit es auf den meisten Bildschirmen gut passt */
+    max-width: 400px; /* Maximalbreite für kleinere Bildschirme */
+    text-align: center;
+    position: relative;
+}
+
+/* Größere Schriftgröße und zentrierte Darstellung für den Titel */
+.title {
+    white-space: nowrap;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Logo-Anpassung */
+.logo {
+    width: 50px; /* Logo-Größe angepasst, damit es gut passt */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Anpassung für den Slider und die Checkbox */
+.switch-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+    width: 100%;
+}
+
+.switch-label input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    width: 50px; /* Breite des Sliders */
+    height: 24px; /* Höhe des Sliders */
+    background-color: #bbb;
+    border-radius: 24px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Leicht verschoben, um den Abstand zu verbessern */
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px; /* Größe des Schiebeknopfes */
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.switch:checked + .slider {
+    background-color: #4CAF50;
+}
+
+.switch:checked + .slider::before {
+    transform: translateX(26px); /* Bewegung des Schiebeknopfes */
+}
+
+/* Fußzeile mit "Made with ❤" */
+.footer {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.heart {
+    color: #ff4b5c;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .container {
+        width: 400px; /* Container passt sich bei größeren Bildschirmen an */
+    }
+}

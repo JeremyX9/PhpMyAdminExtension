@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Port 8080 Executor",
+    "version": "1.0",
+    "description": "Führt Code auf allen Webseiten mit Port 8080 aus.",
+    "permissions": ["tabs", "storage"],
+    "icons" : {
+      "48" : "logo.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "phpMyAdmin Navigation Resizer"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*:*/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
