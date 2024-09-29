@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Port 8080 Executor",
     "version": "1.0",
-    "description": "Führt Code auf allen Webseiten mit Port 8080 aus.",
+    "description": "Eine Chrome Extension zur dynamischen Anpassung der Breite des PhpMyAdmin-Navigationsmenüs basierend auf dem breitesten Element.",
     "permissions": ["tabs", "storage"],
     "icons" : {
       "48" : "logo.png"
